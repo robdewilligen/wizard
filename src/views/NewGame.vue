@@ -112,8 +112,7 @@ export default {
         //Submit Score Value's
         submitScore(round) {
             console.log(this.rounds)
-            // console.log(this.rounds[round].predictedScore)
-            // console.log(this.rounds[round].achievedScore)
+
 
             //Check if Prediction and Rounds fields are filled
             if (this.rounds[round].predictedScore !== null && this.rounds[round].achievedScore !== null) {
