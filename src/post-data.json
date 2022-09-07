@@ -1,0 +1,16 @@
+{
+  "titles" : {
+    "object 1": {
+      "title": "title 1",
+      "name": "1"
+    },
+    "object 2": {
+      "title": "title 2",
+      "name": "2"
+    },
+    "object 12": {
+      "title": "title 12",
+      "name": "12"
+    }
+  }
+}
