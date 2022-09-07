@@ -25,41 +25,11 @@ input:focus {
     outline: none;
 }
 
-select {
-    padding: 7px 40px 7px 5px;
-    margin: 0 10px 10px 10px;
-    width: 15%;
-    border: 1px solid #E8EAED;
-    border-radius: 5px;
-    background: #c9c9c9;
-    box-shadow: 0 1px 3px -2px #9098A9;
-    cursor: grab;
-    font-family: inherit;
-    font-size: 16px;
-    transition: all 150ms ease;
-    color: #5A667F
-}
-
-select:focus {
-    outline: none;
-}
-
-option {
-    color: #223254;
-}
-
-option:focus {
-    outline: none;
-    border-color: #0077FF;
-    box-shadow: 0 0 0 2px rgba(00,77,00,.2);
-}
-
 table {
     display: table;
     margin: 0 0 0 10px;
     table-layout: fixed;
     min-width: 1100px;
-    /*max-width: 1500px;*/
 }
 
 th {
@@ -75,7 +45,6 @@ th {
 .Home {
     margin: auto;
     width: 50%;
-
 }
 
 .button, button {
@@ -92,18 +61,6 @@ th {
     transform: scale(105%);
 }
 
-.container {
-    width: 100%;
-}
-
-.st-box {
-    float: left;
-}
-
-.nd-box {
-    float: right;
-}
-
 .flex {
     display: flex;
     justify-content: flex-start;
@@ -114,7 +71,6 @@ th {
     margin: 0 0 0 10px;
     table-layout: fixed;
     min-width: 1100px;
-    /*max-width: 1500px;*/
 }
 
 .table-cell {
@@ -131,7 +87,6 @@ th {
     padding: 5px 10px 5px 10px;
     max-width: 0;
     min-width: 80px;
-
 }
 
 .table-input {

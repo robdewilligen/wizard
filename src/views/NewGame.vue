@@ -7,9 +7,9 @@
             </p>
         </div>
 
-<!--    input use amount and names  -->
+<!--    Input use amount and names  -->
         <div>
-                <div >
+                <div>
                     <add-user-form @user-added="addUser"></add-user-form>
                     <h3>Users available:</h3>
                     <h4 v-for="user of users.slice(0, 6)">
@@ -22,8 +22,9 @@
             <br>
         </div>
 
-<!--    Table    -->
-    <!--    Players  -->
+
+<!--  Table    -->
+<!--    Players  -->
     <table>
         <tr>
             <th v-for="(i, id) in users.slice(0, 6)" > {{id+1}} | {{ i.name }} </th>
@@ -31,7 +32,8 @@
     </table>
 
 
-    <!--    Scores   -->
+<!--    Scores   -->
+<!--    Generate Score Cells    -->
     <div class="flex table" >
         <div class="table-cell" v-for="(round, i) in rounds.slice(0, 6)" v-bind:id="i">
 
@@ -43,8 +45,8 @@
             </form>
 
 <!--        Display Points and Total Score-->
-            <div id="points" class="table-value"> Points: {{rounds[i].points}} </div>
-            <div id="score" class="table-value">Score: {{rounds[i].score}}</div>
+            <div id="points" class="table-value"> Points : {{rounds[i].points}} </div>
+            <div id="score" class="table-value"> Score : {{rounds[i].score}}</div>
         </div>
     </div>
 
@@ -65,13 +67,10 @@ export default {
 
     data() {
         return {
+            //Player and Score arrays
             users: [],
             rounds: [],
-            Predictions: [],
-            selected: null,
-            selected2: null,
             userId: 1,
-            predictionId: 1,
 
             //Scores Values
             predictedScore: null,
@@ -80,10 +79,6 @@ export default {
             score: null,
         }
     },
-
-    //TODO Split Prediction and rounds inputs for each player
-    //TODO Push value to rounds.predictedScore where userId = playerId
-    //TODO Push value to rounds.achievedScore where userId = playerId
 
     methods: {
         //Add users to a new game
@@ -99,10 +94,17 @@ export default {
 
         //Log Score Value's to the console
         printToConsole(round) {
+            //Check if Prediction and Rounds fields are filled
             if (this.rounds[round].predictedScore !== null && this.rounds[round].achievedScore !== null) {
+
+                //Check if player's Prediction was correct
                 if (this.rounds[round].predictedScore === this.rounds[round].achievedScore){
+
+                    //Calculate points to be rewarded and log both values
                     return console.log('Points: ', this.rounds[round].points = (this.rounds[round].predictedScore + 2) * 10), console.log("-----END OF LOG-----");
                 } else {
+
+                    //Calculate amount of points to reduce from score and log values
                     return console.log(this.rounds[round].points = Math.abs((this.rounds[round].predictedScore - this.rounds[round].achievedScore) * 10) * -1), console.log("-----END OF LOG-----");
                 }
             }
@@ -113,23 +115,30 @@ export default {
         submitScore(round) {
             console.log(this.rounds)
 
-
             //Check if Prediction and Rounds fields are filled
             if (this.rounds[round].predictedScore !== null && this.rounds[round].achievedScore !== null) {
 
+                //Check if player's prediction was correct
                 if (this.rounds[round].predictedScore === this.rounds[round].achievedScore){
+                    //Calculate amount of points to be rewarded
                     this.rounds[round].points = (this.rounds[round].predictedScore + 2) * 10
+
+                    //Add amount of points to current score
                     this.rounds[round].score = this.rounds[round].score + this.rounds[round].points
+
+                    //return calculated points and current score of player
                     return this.rounds[round].points, this.rounds[round].score , console.log("-----END OF ROUND-----");
                 } else {
+                    //Calculate amount to reduce from current score
                     this.rounds[round].points = Math.abs((this.rounds[round].predictedScore - this.rounds[round].achievedScore) * 10) * -1
+
+                    //Reduce point amount from current score
                     this.rounds[round].score = this.rounds[round].score + this.rounds[round].points
+
+                    //return calculated points and current score of player
                     return this.rounds[round].points, this.rounds[round].score , console.log("-----END OF ROUND-----");
                 }
-
-
             }
-
         }
 
     //    end of methods

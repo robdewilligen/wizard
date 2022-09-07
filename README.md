@@ -8,9 +8,9 @@ Het doel van deze applicatie is om het bijhouden van de score van het kaartspel 
 - Aantal rondes wat mogelijk is om te spelen met X aantal spelers
 
 Game start
-- Invullen voorspelling per speler
-- Invullen resultaat per speler (behaalde rondes)
-- Verwerken van de nieuwe scores
+- ~~Invullen voorspelling per speler~~
+- ~~Invullen resultaat per speler (behaalde rondes)~~
+- ~~Verwerken van de nieuwe scores~~
 
 Berekeningen
 - Voorspelling goed 0 rondes? + 20 punten
@@ -21,3 +21,8 @@ Overzicht
 - ~~Tabel met spelersnamen bovenaan~~
 - Score in elke cel van de gespeelde ronden
 - Knop om nieuwe ronde te starten
+
+
+Future Features
+- display previous round scores per player
+- make responsive

@@ -9,30 +9,13 @@
 </template>
 
 <script>
-//Imports
-
 //JavaScript
 export default {
-
-    props: {
-
-    },
-    data(){
-        return {
-
-        }
-    },
-
-    methods: {
+methods: {
         newGame() {
             return console.log("New Game Started")
         }
     },
-
-    mounted() {
-
-    }
-
 }
 
 </script>
