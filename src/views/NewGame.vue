@@ -39,8 +39,8 @@
 
 <!--        Input Scores and Predictions-->
             <form @submit.prevent="submitScore(i)">
-                <input class="table-input" type="number" v-bind:id="i+1" v-model="rounds[i].predictedScore" placeholder="Prediction">
-                <input class="table-input" type="number" v-bind:id="i+1" v-model="rounds[i].achievedScore" placeholder="Rounds">
+                <input class="table-input" type="number" v-bind:id="i+1" v-model="rounds[i].predictedScore" placeholder="Prediction" required>
+                <input class="table-input" type="number" v-bind:id="i+1" v-model="rounds[i].achievedScore" placeholder="Rounds" required>
                 <input @click="printToConsole(i)" type="submit" class="table-btn">
             </form>
 

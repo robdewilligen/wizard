@@ -105,3 +105,37 @@ th {
     background-color: #3c6dde;
     transform: scale(105%);
 }
+
+@media (prefers-color-scheme: light) {
+    * {
+        background-color: #dbd7d7;
+    }
+
+    header {
+        background-color: #dbd7d7;
+    }
+
+    th {
+        border: rgba(0, 0, 0, 0.35) solid 1px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    }
+
+    button {
+        box-shadow: rgba(0, 0, 0, 0.35) 0 3px 10px;
+    }
+
+    /* Classes */
+    .table-cell {
+        border: rgba(0, 0, 0, 0.35) solid 1px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    }
+
+    .table-value {
+        border: rgba(0, 0, 0, 0.35) solid 1px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0 1px 8px;
+    }
+
+    .table-btn {
+        box-shadow: rgba(0, 0, 0, 0.35) 0 3px 10px;
+    }
+}
