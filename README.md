@@ -1,28 +1,32 @@
 # Wizard
 
-Het doel van deze applicatie is om het bijhouden van de score van het kaartspel Wizard te digitaliseren en te automatiseren.
+The goal of this application is to digitalize the score keeping of the card game Wizard.
+
+Feel free to start a discussion for questions, ideas or buggs you wish te publish.
+
   
-## Benodigdheden
-- ~~Invullen van aantal deelnemers~~
-- ~~Invullen van naam per deelnemer~~
-- Aantal rondes wat mogelijk is om te spelen met X aantal spelers
+  
+## Requirements
+- ~~Invullen van aantal deelnemers
+- ~~Invullen van naam per deelnemer
 
 Game start
-- ~~Invullen voorspelling per speler~~
-- ~~Invullen resultaat per speler (behaalde rondes)~~
-- ~~Verwerken van de nieuwe scores~~
+- ~~Invullen voorspelling per speler
+- ~~Invullen resultaat per speler (behaalde rondes)
+- ~~Verwerken van de nieuwe scores
 
-Berekeningen
-- Voorspelling goed 0 rondes? + 20 punten
-- Voorspelling goed 3 rondes? 30 + 20 punten = 50 punten
-- Voorspelling fout? -10 voor elke ronde dat je ernaast zit
+Calculations
+- Prediction correct with 0 wins? = +20 Points
+- Prediction correct with 3 wins? = 30 points + 20 points = 50 points
+- Prediction wrong? -10 points per win you miss(predict 3, win 2 = -10points)
 
-Overzicht
-- ~~Tabel met spelersnamen bovenaan~~
-- Score in elke cel van de gespeelde ronden
-- Knop om nieuwe ronde te starten
+General
+- ~~Tabel met spelersnamen bovenaan
+- ~~Score in elke cel van de gespeelde ronden
 
 
 Future Features
 - display previous round scores per player
 - make responsive
+- Amount of rounds possible with x amount of players
+- Button to start a new round, display previous scores in new table
