@@ -3,7 +3,6 @@
         <router-link to="/">Home</router-link>  |
         <router-link @click="newGame" to="/newGame">New Game</router-link>
     </header>
-    <br>
     <div>
         <router-view></router-view>
     </div>
